@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>currency converter</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="currency.js" defer></script>
+</head>
+<body>
+
+    <div class="container mt-5">
+        <!-- Header Row -->
+        <div class="row mb-4">
+            <div class="col">
+                <div class="card bg-primary text-white text-center">
+                    <div class="card-body">
+                        <h2>USD CURRENCY CONVERTER</h2>
+                        <p>Convert USD to any currency using live exchange rates.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content Row -->
+        <div class="row">
+
+
+
+            <!-- Left Column -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">Currency Converter</div>
+
+                    <div class="card-body">
+                        <label class="form-label">Amount in USD</label>
+                        <input type="number" id="usd"  class="form-control"><br>
+                        <p id="error" class="text-danger"></p>
+
+                        <label class="form-label">Convert To</label>
+                        <select id="currency" class="form-select">
+                            <option value="INR">Indian Rupee (INR)</option>
+                            <option value="EUR">Euro (EUR)</option>
+                            <option value="GBP">British Pound (GBP)</option>
+                            <option value="JPY">Japanese Yen (JPY)</option>
+                            <option value="AUD">Australian Dollar (AUD)</option>
+                            <option value="CAD">Canadian Dollar (CAD)</option>
+                            <option value="CHF">Swiss Franc (CHF)</option>
+                        </select><br>
+
+                        <button class="btn btn-primary w-100" onclick="convert()"> Convert</button> <!-- giving event handler -->
+                        
+                    </div>
+                </div>
+            </div>
+
+        <!-- Right Column -->
+
+        <div class="col-md-6">
+
+            <!-- Conversion Result Card -->
+            <div class="card mb-3" id="resultCard" style="display:none;">
+                <div class="card-header bg-success text-white">Conversion Result</div>
+
+                <div class="card-body">
+                    <h4 id="resultdisplay"></h4>
+                </div>
+
+            </div>
+
+            <!-- Exchange Rate Card -->
+            <div class="card" id="exchangeCard" style="display:none;">
+                <div class="card-header bg-success text-white">Exchange Rate</div>
+
+                <div class="card-body">
+                    <h5 id="rate"></h5>
+                </div>
+
+            </div>
+        </div>
+
+
+
+    <!-- Popular Currencies -->
+    <div class="row mt-4">
+        <div class="col">
+            <div class="card">
+                <div class="card-header bg-danger text-white">Popular Currencies</div>
+
+                <div class="card-body">
+                <div class="row text-center">
+
+                        <div class="col">
+                            <img src="https://flagcdn.com/48x36/in.png" class="img-fluid mb-2" alt="India">
+                            <p><strong>Indian Rupee</strong><br>INR</p>
+                        </div>
+
+                        <div class="col">
+                            <img src="https://flagcdn.com/48x36/us.png" class="img-fluid mb-2" alt="USA">
+                            <p><strong>US Dollar</strong><br>USD</p>
+                        </div>
+
+                        <div class="col">
+                            <img src="https://flagcdn.com/48x36/eu.png" class="img-fluid mb-2" alt="Europe">
+                            <p><strong>Euro</strong><br>EUR</p>
+                        </div>
+
+                        <div class="col">
+                            <img src="https://flagcdn.com/48x36/gb.png" class="img-fluid mb-2" alt="United Kingdom">
+                            <p><strong>British Pound</strong><br>GBP</p>
+                        </div>
+
+                        <div class="col">
+                            <img src="https://flagcdn.com/48x36/jp.png" class="img-fluid mb-2" alt="Japan">
+                            <p><strong>Japanese Yen</strong><br>JPY</p>
+                        </div>
+
+                        <div class="col">
+                            <img src="https://flagcdn.com/48x36/au.png" class="img-fluid mb-2" alt="Australia">
+                            <p><strong>Australian Dollar</strong><br>AUD</p>
+                        </div>
+
+                        <div class="col">
+                            <img src="https://flagcdn.com/48x36/ca.png" class="img-fluid mb-2" alt="Canada">
+                            <p><strong>Canadian Dollar</strong><br>CAD</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+</body>
+</html>
